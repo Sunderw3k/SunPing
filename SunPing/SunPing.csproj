@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>sping</AssemblyName>
+    <Authors>Sunderw_3k</Authors>
+    <Product>SunPing</Product>
+    <Description>A custom pinger</Description>
+    <Copyright>Sunderw_3k © 2022</Copyright>
+    <PackageId>$(AssemblyName)</PackageId>
+  </PropertyGroup>
+
+</Project>
