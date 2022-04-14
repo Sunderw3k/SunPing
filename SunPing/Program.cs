@@ -76,13 +76,20 @@ namespace SunPing
             {
                 if (_address.Any(x => char.IsLetter(x)))
                 {
-                    try
+                    if (_address == "localhost")
                     {
-                        address = Dns.GetHostAddresses(_address).First();
+                        address = IPAddress.Parse("127.0.0.1");
                     }
-                    catch
+                    else
                     {
-                        return "The adress is invalid.";
+                        try
+                        {
+                            address = Dns.GetHostAddresses(_address).First();
+                        }
+                        catch
+                        {
+                            return "The adress is invalid.";
+                        }
                     }
                 }
                 else
